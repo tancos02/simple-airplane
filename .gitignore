@@ -1,3 +1,6 @@
 $ cat .gitignore
 # exclude build
 /build/*
+/common/*
+/distrib/*
+/external/*
