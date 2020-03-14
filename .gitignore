@@ -1,11 +1,4 @@
-$ cat .gitignore
-# exclude everything except CMakelists and src
-/*
-/build/*
-/common/*
-/distrib/*
-/external/*
-!/src
-!/src/*
-!CMakelists.txt
-!README.md
+build/
+common/
+distrib/
+external/
