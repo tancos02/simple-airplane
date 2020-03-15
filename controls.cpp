@@ -50,7 +50,6 @@ float projPlaneAngle = 0.0f;
 // Initial position : on +Z
 glm::vec3 position = glm::vec3( x,y,z ); 
 
-float speed = 3.0f; // 3 units / second
 
 glm::vec3 initPos(-rad,0,0);
 glm::vec3 initDir(0,0,0);
@@ -71,19 +70,6 @@ void computeMatricesFromInputs(){
 	double currentTime = glfwGetTime();
 	float deltaTime = float(currentTime - lastTime);
 
-	// Get mouse position
-	double xpos, ypos;
-	glfwGetCursorPos(window, &xpos, &ypos);
-
-	// Reset mouse position for next frame
-	glfwSetCursorPos(window, 1024/2, 768/2);
-
-	// X rotation
-	glm::mat4 xRotate(
-		
-	);
-
-
 	// Move forward
 	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
 		position -= position*deltaPositionVector;
@@ -98,13 +84,13 @@ void computeMatricesFromInputs(){
 		z += 0.01f;
 		rad += 0.01*sqrt(2);
 	}
-	// Strafe right
+	// Rotate camera right
 	if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
 		angle+=0.01f;
 		glm::vec3 rotateVector(-rad*cos(angle),0,rad*sin(angle));
 		position = rotateVector;
 	}
-	// Strafe left
+	// Rotate camera left
 	if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
 		angle-=0.01f;
 		glm::vec3 rotateVector(-rad*cos(angle),0,rad*sin(angle));
@@ -153,44 +139,38 @@ void computeMatricesFromInputs(){
 		ModelMatrix = initMatrix;
 	}
 
-		// Rotation X
+	// Model Rotation X
 	if(glfwGetKey(window,GLFW_KEY_Q) == GLFW_PRESS) {
-		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
 		glm::vec3 myRotationAxis( 1,0,0);
 		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), 0.05f, myRotationAxis );
 		ModelMatrix = rotationMatrix * ModelMatrix;
 	}
 
 	if(glfwGetKey(window,GLFW_KEY_W) == GLFW_PRESS) {
-		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
 		glm::vec3 myRotationAxis( 1,0,0);
 		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), -0.05f, myRotationAxis );
 		ModelMatrix = rotationMatrix * ModelMatrix;
 	}
-
+	// Model Rotation Y
 	if(glfwGetKey(window,GLFW_KEY_A) == GLFW_PRESS) {
-		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
 		glm::vec3 myRotationAxis( 0,1,0);
 		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), 0.05f, myRotationAxis );
 		ModelMatrix = rotationMatrix * ModelMatrix;
 	}
 
 	if(glfwGetKey(window,GLFW_KEY_S) == GLFW_PRESS) {
-		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
 		glm::vec3 myRotationAxis( 0,1,0);
 		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), -0.05f, myRotationAxis );
 		ModelMatrix = rotationMatrix * ModelMatrix;
 	}
-
+	// Model Rotation Z
 	if(glfwGetKey(window,GLFW_KEY_Z) == GLFW_PRESS) {
-		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
 		glm::vec3 myRotationAxis( 0,0,1);
 		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f),0.05f, myRotationAxis );
 		ModelMatrix = rotationMatrix * ModelMatrix;
 	}
 
 	if(glfwGetKey(window,GLFW_KEY_X) == GLFW_PRESS) {
-		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
 		glm::vec3 myRotationAxis( 0,0,1);
 		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f),-0.05f, myRotationAxis );
 		ModelMatrix = rotationMatrix * ModelMatrix;
