@@ -17,6 +17,8 @@ using namespace glm;
 #include <common/shader.hpp>
 #include <common/controls.hpp>
 
+#include "vertex_points.h"
+
 int main( void )
 {
 	// Initialise GLFW
@@ -794,16 +796,18 @@ int main( void )
 		);
 
 		// 2nd attribute buffer : colors
-		glEnableVertexAttribArray(1);
-		glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
-		glVertexAttribPointer(
-			1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
-			3,                                // size
-			GL_FLOAT,                         // type
-			GL_FALSE,                         // normalized?
-			0,                                // stride
-			(void*)0                          // array buffer offset
-		);
+		if (getShaderStatus() == 1) {
+			glEnableVertexAttribArray(1);
+			glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
+			glVertexAttribPointer(
+				1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
+				3,                                // size
+				GL_FLOAT,                         // type
+				GL_FALSE,                         // normalized?
+				0,                                // stride
+				(void*)0                          // array buffer offset
+			);
+		}
 		
 
 		// Draw the triangle !
