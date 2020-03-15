@@ -15,6 +15,9 @@ GLFWwindow* window;
 using namespace glm;
 
 #include <common/shader.hpp>
+#include <common/controls.hpp>
+
+#include "vertex_points.h"
 
 int main( void )
 {
@@ -33,7 +36,7 @@ int main( void )
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// Open a window and create its OpenGL context
-	window = glfwCreateWindow( 1024, 768, "Tutorial 02 - Red triangle", NULL, NULL);
+	window = glfwCreateWindow( 1024, 768, "Simple Airplane", NULL, NULL);
 	if( window == NULL ){
 		fprintf( stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n" );
 		getchar();
@@ -57,6 +60,11 @@ int main( void )
 	// Dark blue background
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
+	// Enable depth test
+	glEnable(GL_DEPTH_TEST);
+	// Accept fragment if it closer to the camera than the former one
+	glDepthFunc(GL_LESS);
+
 	GLuint VertexArrayID;
 	glGenVertexArrays(1, &VertexArrayID);
 	glBindVertexArray(VertexArrayID);
@@ -67,109 +75,680 @@ int main( void )
 	// Get a handle for our "MVP" uniform
 	GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 
-	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
-	glm::mat4 Projection = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
-	// Camera matrix
-	glm::mat4 View       = glm::lookAt(
-								glm::vec3(4,3,-3), // Camera is at (4,3,-3), in World Space
-								glm::vec3(0,0,0), // and looks at the origin
-								glm::vec3(0,1,0)  // Head is up (set to 0,-1,0 to look upside-down)
-						   );
-	// Model matrix : an identity matrix (model will be at the origin)
-	glm::mat4 Model      = glm::mat4(1.0f);
-	// Our ModelViewProjection : multiplication of our 3 matrices
-	glm::mat4 MVP        = Projection * View * Model; // Remember, matrix multiplication is the other way around
-
 	// Our vertices. Tree consecutive floats give a 3D vertex; Three consecutive vertices give a triangle.
 	// A cube has 6 faces with 2 triangles each, so this makes 6*2=12 triangles, and 12*3 vertices
 	static const GLfloat g_vertex_buffer_data[] = { 
-		-1.0f,-1.0f,-1.0f, // triangle 1 : begin
-    	-1.0f,-1.0f, 1.0f,
-    	-1.0f, 1.0f, 1.0f, // triangle 1 : end
-    	1.0f, 1.0f,-1.0f, // triangle 2 : begin
-    	-1.0f,-1.0f,-1.0f,
-    	-1.0f, 1.0f,-1.0f, // triangle 2 : end
-    	1.0f,-1.0f, 1.0f,
-    	-1.0f,-1.0f,-1.0f,
-    	1.0f,-1.0f,-1.0f,
-    	1.0f, 1.0f,-1.0f,
-    	1.0f,-1.0f,-1.0f,
-    	-1.0f,-1.0f,-1.0f,
-    	-1.0f,-1.0f,-1.0f,
-    	-1.0f, 1.0f, 1.0f,
-    	-1.0f, 1.0f,-1.0f,
-    	1.0f,-1.0f, 1.0f,
-    	-1.0f,-1.0f, 1.0f,
-    	-1.0f,-1.0f,-1.0f,
-    	-1.0f, 1.0f, 1.0f,
-    	-1.0f,-1.0f, 1.0f,
-    	1.0f,-1.0f, 1.0f,
-    	1.0f, 1.0f, 1.0f,
-    	1.0f,-1.0f,-1.0f,
-    	1.0f, 1.0f,-1.0f,
-    	1.0f,-1.0f,-1.0f,
-    	1.0f, 1.0f, 1.0f,
-    	1.0f,-1.0f, 1.0f,
-    	1.0f, 1.0f, 1.0f,
-    	1.0f, 1.0f,-1.0f,
-    	-1.0f, 1.0f,-1.0f,
-    	1.0f, 1.0f, 1.0f,
-    	-1.0f, 1.0f,-1.0f,
-    	-1.0f, 1.0f, 1.0f,
-    	1.0f, 1.0f, 1.0f,
-    	-1.0f, 1.0f, 1.0f,
-    	1.0f,-1.0f, 1.0f
+		// Badan utama
+		// depan
+		0.0f, 0.0f, 0.5f,
+		1.5f, 0.0f, 0.5f,
+		0.0f, 0.5f, 0.5f,
+		1.5f, 0.0f, 0.5f,
+		0.0f, 0.5f, 0.5f,
+		1.5f, 0.5f, 0.5f,
+		// belakang--
+		0.0f, 0.0f, 0.0f,
+		1.5f, 0.0f, 0.0f,
+		0.0f, 0.5f, 0.0f,
+		1.5f, 0.0f, 0.0f,
+		0.0f, 0.5f, 0.0f,
+		1.5f, 0.5f, 0.0f,
+		// kanan
+		1.5f, 0.0f, 0.5f,
+		1.5f, 0.0f, 0.0f,
+		1.5f, 0.5f, 0.5f,
+		1.5f, 0.5f, 0.5f,
+		1.5f, 0.0f, 0.0f,
+		1.5f, 0.5f, 0.0f,
+		// kiri
+		0.0f, 0.0f, 0.5f,
+		0.0f, 0.5f, 0.5f,
+		0.0f, 0.0f, 0.0f,
+		0.0f, 0.5f, 0.5f,
+		0.0f, 0.0f, 0.0f,
+		0.0f, 0.5f, 0.0f,
+		// atas
+		0.0f, 0.5f, 0.5f,
+		1.5f, 0.5f, 0.5f,
+		0.0f, 0.5f, 0.0f,
+		1.5f, 0.5f, 0.5f,
+		0.0f, 0.5f, 0.0f,
+		1.5f, 0.5f, 0.0f,
+		// bawah
+		0.0f, 0.0f, 0.5f,
+		1.5f, 0.0f, 0.5f,
+		0.0f, 0.0f, 0.0f,
+		1.5f, 0.0f, 0.5f,
+		0.0f, 0.0f, 0.0f,
+		1.5f, 0.0f, 0.0f,
+
+		// Baling-baling
+		// Baling-baling atas
+		// belakang
+		0.0f, 0.25f, 0.25f,
+		0.0f, 0.5f, 0.14f,
+		0.0f, 0.5f, 0.36f,
+		// depan
+		-0.1f, 0.5f, 0.14f,
+		-0.1f, 0.5f, 0.36f,
+		-0.1f, 0.25f, 0.25f,
+		// sisi 1
+		0.0f, 0.25f, 0.25f,
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.5f, 0.36f,
+
+		-0.1f, 0.5f, 0.36f,
+		0.0f, 0.5f, 0.36f,
+		0.0f, 0.25f, 0.25f,
+		// sisi 2
+		0.0f, 0.25f, 0.25f,
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.5f, 0.14f,
+
+		-0.1f, 0.5f, 0.14f,
+		0.0f, 0.5f, 0.14f,
+		0.0f, 0.25f, 0.25f,
+		// sisi 3
+		0.0f, 0.5f, 0.14f,
+		-0.1f, 0.5f, 0.14f,
+		-0.1f, 0.5f, 0.36f,
+
+		-0.1f, 0.5f, 0.36f,
+		0.0f, 0.5f, 0.36f,
+		0.0f, 0.5f, 0.14f,
+	
+		// Baling-baling kiri
+		// belakang
+		0.0f, 0.25f, 0.25f,
+		0.0f, 0.0f, 0.16f,
+		0.0f, 0.16f, 0.0f,
+		// depan
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.0f, 0.16f,
+		-0.1f, 0.16f, 0.0f,
+		// sisi 1
+		0.0f, 0.25f, 0.25f,
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.16f, 0.0f,
+
+		0.0f, 0.25f, 0.25f,
+		0.0f, 0.0f, 0.16f,
+		-0.1f, 0.0f, 0.16f,
+		// sisi 2
+		-0.1f, 0.0f, 0.16f,
+		-0.1f, 0.16f, 0.0f,
+		0.0f, 0.0f, 0.16f,
+
+		0.0f, 0.0f, 0.16f,
+		0.0f, 0.16f, 0.0f,
+		-0.1f, 0.16f, 0.0f,
+		// sisi 3
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.16f, 0.0f,
+		0.0f, 0.16f, 0.0f,
+
+		-0.1f, 0.25f, 0.25f,
+		0.0f, 0.25f, 0.25f,
+		0.0f, 0.16f, 0.0f,
+
+
+		// Baling-baling kanan
+		// belakang
+		0.0f, 0.25f, 0.25f,
+		0.0f, 0.0f, 0.32f,
+		0.0f, 0.16f, 0.5f,
+		// depan
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.0f, 0.32f,
+		-0.1f, 0.16f, 0.5f,
+		// sisi 1
+		0.0f, 0.25f, 0.25f,
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.0f, 0.32f,
+
+		-0.1f, 0.0f, 0.32f,
+		0.0f, 0.0f, 0.32f,
+		0.0f, 0.25f, 0.25f,
+		// sisi 2
+		0.0f, 0.0f, 0.32f,
+		-0.1f, 0.0f, 0.32f,
+		-0.1f, 0.16f, 0.5f,
+
+		-0.1f, 0.16f, 0.5f,
+		0.0f, 0.16f, 0.32f,
+		0.0f, 0.0f, 0.32f,
+		// sisi 3
+		0.0f, 0.25f, 0.25f,
+		-0.1f, 0.25f, 0.25f,
+		-0.1f, 0.16f, 0.5f,
+
+		-0.1f, 0.16f, 0.5f,
+		0.0f, 0.16f, 0.32f,
+		0.0f, 0.25f,0.25f,
+
+		// Ekor mendatar
+		// Depan
+		1.2f, 0.5f, 0.75f,
+		1.45f, 0.5f, 0.75f,
+		1.2f, 0.6f, 0.75f,
+		1.45f, 0.5f, 0.75f,
+		1.2f, 0.6f, 0.75f,
+		1.45f, 0.6f, 0.75f,
+		// belakang
+		1.2f, 0.5f, -0.25f,
+		1.45f, 0.5f, -0.25f,
+		1.2f, 0.6f, -0.25f,
+		1.45f, 0.5f, -0.25f,
+		1.2f, 0.6f, -0.25f,
+		1.45f, 0.6f, -0.25f,
+		// kanan
+		1.45f, 0.5f, 0.75f,
+		1.45f, 0.5f, -0.25f,
+		1.45f, 0.6f, 0.75f,
+		1.45f, 0.6f, 0.75f,
+		1.45f, 0.5f, -0.25f,
+		1.45f, 0.6f, -0.25f,
+		// kiri
+		1.2f, 0.5f, 0.75f,
+		1.2f, 0.6f, 0.75f,
+		1.2f, 0.5f, -0.25f,
+		1.2f, 0.6f, 0.75f,
+		1.2f, 0.5f, -0.25f,
+		1.2f, 0.6f, -0.25f,
+		// atas
+		1.2f, 0.6f, 0.75f,
+		1.45f, 0.6f, 0.75f,
+		1.2f, 0.6f, -0.25f,
+		1.45f, 0.6f, 0.75f,
+		1.2f, 0.6f, -0.25f,
+		1.45f, 0.6f, -0.25f,
+		// bawah
+		1.2f, 0.5f, 0.75f,
+		1.45f, 0.5f, 0.75f,
+		1.2f, 0.5f, -0.25f,
+		1.45f, 0.5f, 0.75f,
+		1.2f, 0.5f, -0.25f,
+		1.45f, 0.5f, -0.25f,
+
+		// Sayap tegak
+		// depan
+		1.2f, 0.6f, 0.3f,
+		1.45f, 0.6f, 0.3f,
+		1.2f, 0.85f, 0.3f,
+		1.45f, 0.6f, 0.3f,
+		1.2f, 0.85f, 0.3f,
+		1.45f, 0.85f, 0.3f,
+		// belakang--
+		1.2f, 0.6f, 0.2f,
+		1.45f, 0.6f, 0.2f,
+		1.2f, 0.85f, 0.2f,
+		1.45f, 0.6f, 0.2f,
+		1.2f, 0.85f, 0.2f,
+		1.45f, 0.85f, 0.2f,
+		// kanan
+		1.45f, 0.6f, 0.3f,
+		1.45f, 0.6f, 0.2f,
+		1.45f, 0.85f, 0.3f,
+		1.45f, 0.85f, 0.3f,
+		1.45f, 0.6f, 0.2f,
+		1.45f, 0.85f, 0.2f,
+		// kiri
+		1.2f, 0.6f, 0.3f,
+		1.2f, 0.85f, 0.3f,
+		1.2f, 0.6f, 0.2f,
+		1.2f, 0.85f, 0.3f,
+		1.2f, 0.6f, 0.2f,
+		1.2f, 0.85f, 0.2f,
+		// atas
+		1.2f, 0.85f, 0.3f,
+		1.45f, 0.85f, 0.3f,
+		1.2f, 0.85f, 0.2f,
+		1.45f, 0.85f, 0.3f,
+		1.2f, 0.85f, 0.2f,
+		1.45f, 0.85f, 0.2f,
+		// bawah
+		1.2f, 0.6f, 0.3f,
+		1.45f, 0.6f, 0.3f,
+		1.2f, 0.6f, 0.2f,
+		1.45f, 0.6f, 0.3f,
+		1.2f, 0.6f, 0.2f,
+		1.45f, 0.6f, 0.2f,
+
+		// Sayap bawah
+		// depan
+		0.4f,-0.1f, 1.0f,
+		0.8f,-0.1f, 1.0f,
+		0.4f, 0.0f, 1.0f,
+		0.8f,-0.1f, 1.0f,
+		0.4f, 0.0f, 1.0f,
+		0.8f, 0.0f, 1.0f,
+		// belakang--
+		0.4f,-0.1f, -0.5f,
+		0.8f,-0.1f, -0.5f,
+		0.4f, 0.0f, -0.5f,
+		0.8f,-0.1f, -0.5f,
+		0.4f, 0.0f, -0.5f,
+		0.8f, 0.0f, -0.5f,
+		// kanan
+		0.8f,-0.1f, 1.0f,
+		0.8f,-0.1f, -0.5f,
+		0.8f, 0.0f, 1.0f,
+		0.8f, 0.0f, 1.0f,
+		0.8f,-0.1f, -0.5f,
+		0.8f, 0.0f, -0.5f,
+		// kiri
+		0.4f,-0.1f, 1.0f,
+		0.4f, 0.0f, 1.0f,
+		0.4f,-0.1f, -0.5f,
+		0.4f, 0.0f, 1.0f,
+		0.4f,-0.1f, -0.5f,
+		0.4f, 0.0f, -0.5f,
+		// atas
+		0.4f, 0.0f, 1.0f,
+		0.8f, 0.0f, 1.0f,
+		0.4f, 0.0f, -0.5f,
+		0.8f, 0.0f, 1.0f,
+		0.4f, 0.0f, -0.5f,
+		0.8f, 0.0f, -0.5f,
+		// bawah
+		0.4f,-0.1f, 1.0f,
+		0.8f,-0.1f, 1.0f,
+		0.4f,-0.1f, -0.5f,
+		0.8f,-0.1f, 1.0f,
+		0.4f,-0.1f, -0.5f,
+		0.8f,-0.1f, -0.5f,
+
+		// Sayap atas
+		// depan
+		0.4f, 0.5f, 1.0f,
+		0.8f, 0.5f, 1.0f,
+		0.4f, 0.6f, 1.0f,
+		0.8f, 0.5f, 1.0f,
+		0.4f, 0.6f, 1.0f,
+		0.8f, 0.6f, 1.0f,
+		// belakang--
+		0.4f, 0.5f, -0.5f,
+		0.8f, 0.5f, -0.5f,
+		0.4f, 0.6f, -0.5f,
+		0.8f, 0.5f, -0.5f,
+		0.4f, 0.6f, -0.5f,
+		0.8f, 0.6f, -0.5f,
+		// kanan
+		0.8f, 0.5f, 1.0f,
+		0.8f, 0.5f, -0.5f,
+		0.8f, 0.6f, 1.0f,
+		0.8f, 0.6f, 1.0f,
+		0.8f, 0.5f, -0.5f,
+		0.8f, 0.6f, -0.5f,
+		// kiri
+		0.4f, 0.5f, 1.0f,
+		0.4f, 0.6f, 1.0f,
+		0.4f, 0.5f, -0.5f,
+		0.4f, 0.6f, 1.0f,
+		0.4f, 0.5f, -0.5f,
+		0.4f, 0.6f, -0.5f,
+		// atas
+		0.4f, 0.6f, 1.0f,
+		0.8f, 0.6f, 1.0f,
+		0.4f, 0.6f, -0.5f,
+		0.8f, 0.6f, 1.0f,
+		0.4f, 0.6f, -0.5f,
+		0.8f, 0.6f, -0.5f,
+		// bawah
+		0.4f, 0.5f, 1.0f,
+		0.8f, 0.5f, 1.0f,
+		0.4f, 0.5f, -0.5f,
+		0.8f, 0.5f, 1.0f,
+		0.4f, 0.5f, -0.5f,
+		0.8f, 0.5f, -0.5f,
+
 	};
+
 	// One color for each vertex. They were generated randomly.
 	static const GLfloat g_color_buffer_data[] = { 
-		// 1st square
+		// Badan Utama
 		0.1f, 0.1f, 0.1f,
 		0.1f, 0.1f, 0.1f,
 		0.1f, 0.1f, 0.1f,
 
-		0.11f, 0.11f, 0.11f,
-		0.11f, 0.11f, 0.11f,
-		0.11f, 0.11f, 0.11f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.12f, 0.12f, 0.12f,
-		0.12f, 0.12f, 0.12f,
-		0.12f, 0.12f, 0.12f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.13f, 0.13f, 0.13f,
-		0.13f, 0.13f, 0.13f,
-		0.13f, 0.13f, 0.13f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.14f, 0.14f, 0.14f,
-		0.14f, 0.14f, 0.14f,
-		0.14f, 0.14f, 0.14f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.15f, 0.15f, 0.15f,
-		0.15f, 0.15f, 0.15f,
-		0.15f, 0.15f, 0.15f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.16f, 0.16f, 0.16f,
-		0.16f, 0.16f, 0.16f,
-		0.16f, 0.16f, 0.16f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.17f, 0.17f, 0.17f,
-		0.17f, 0.17f, 0.17f,
-		0.17f, 0.17f, 0.17f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.18f, 0.18f, 0.18f,
-		0.18f, 0.18f, 0.18f,
-		0.18f, 0.18f, 0.18f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.19f, 0.19f, 0.19f,
-		0.19f, 0.19f, 0.19f,
-		0.19f, 0.19f, 0.19f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.2f, 0.2f, 0.2f,
-		0.2f, 0.2f, 0.2f,
-		0.2f, 0.2f, 0.2f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
 
-		0.21f, 0.21f, 0.21f,
-		0.21f, 0.21f, 0.21f,
-		0.21f, 0.21f, 0.21f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+		0.1f, 0.1f, 0.1f,
+
+		// Baling-baling
+		// atas
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		// kiri
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		// kanan
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+		1.0f, 1.0f, 1.0f,
+
+		// Ekor Mendatar
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+		0.5f, 0.5f, 0.5f,
+
+		// Ekor tegak
+	    0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+		0.75f, 0.75f, 0.5f,
+
+		// Sayap atas
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 // Sayap bawah
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 0.25f,  0.3f, 0.5f,
+		 
 	};
 
 	GLuint vertexbuffer;
@@ -185,10 +764,17 @@ int main( void )
 	do{
 
 		// Clear the screen
-		glClear( GL_COLOR_BUFFER_BIT );
+		glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// Use our shader
 		glUseProgram(programID);
+
+		// Compute the MVP matrix from keyboard input
+		computeMatricesFromInputs();
+		glm::mat4 ProjectionMatrix = getProjectionMatrix();
+		glm::mat4 ViewMatrix = getViewMatrix();
+		glm::mat4 ModelMatrix = getModelMatrix();
+		glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
 		// Send our transformation to the currently bound shader, 
 		// in the "MVP" uniform
@@ -207,20 +793,22 @@ int main( void )
 		);
 
 		// 2nd attribute buffer : colors
-		glEnableVertexAttribArray(1);
-		glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
-		glVertexAttribPointer(
-			1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
-			3,                                // size
-			GL_FLOAT,                         // type
-			GL_FALSE,                         // normalized?
-			0,                                // stride
-			(void*)0                          // array buffer offset
-		);
+		if (getShaderStatus() == 1) {
+			glEnableVertexAttribArray(1);
+			glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
+			glVertexAttribPointer(
+				1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
+				3,                                // size
+				GL_FLOAT,                         // type
+				GL_FALSE,                         // normalized?
+				0,                                // stride
+				(void*)0                          // array buffer offset
+			);
+		}
 		
 
 		// Draw the triangle !
-		glDrawArrays(GL_TRIANGLES, 0, 12*3); // 3 indices starting at 0 -> 1 triangle
+		glDrawArrays(GL_TRIANGLES, 0, 84*3); // 3 indices starting at 0 -> 1 triangle
 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);

@@ -61,6 +61,8 @@ add_executable(main
 	src/main.cpp
 	common/shader.cpp
 	common/shader.hpp
+	common/controls.cpp
+	common/controls.hpp
 	
 	src/SimpleFragmentShader.fragmentshader
 	src/SimpleVertexShader.vertexshader
