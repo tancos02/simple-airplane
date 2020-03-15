@@ -12,6 +12,7 @@ using namespace glm;
 glm::mat4 ViewMatrix;
 glm::mat4 ProjectionMatrix;
 glm::mat4 ModelMatrix = glm::mat4(1.0);
+glm::mat4 initMatrix = glm::mat4(1.0);
 int shaderStatus;
 
 glm::mat4 getViewMatrix(){
@@ -149,6 +150,50 @@ void computeMatricesFromInputs(){
 		y = 0.0f;
 		z = 0.0f;
 		up = initUp;
+		ModelMatrix = initMatrix;
+	}
+
+		// Rotation X
+	if(glfwGetKey(window,GLFW_KEY_Q) == GLFW_PRESS) {
+		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
+		glm::vec3 myRotationAxis( 1,0,0);
+		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), 0.05f, myRotationAxis );
+		ModelMatrix = rotationMatrix * ModelMatrix;
+	}
+
+	if(glfwGetKey(window,GLFW_KEY_W) == GLFW_PRESS) {
+		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
+		glm::vec3 myRotationAxis( 1,0,0);
+		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), -0.05f, myRotationAxis );
+		ModelMatrix = rotationMatrix * ModelMatrix;
+	}
+
+	if(glfwGetKey(window,GLFW_KEY_A) == GLFW_PRESS) {
+		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
+		glm::vec3 myRotationAxis( 0,1,0);
+		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), 0.05f, myRotationAxis );
+		ModelMatrix = rotationMatrix * ModelMatrix;
+	}
+
+	if(glfwGetKey(window,GLFW_KEY_S) == GLFW_PRESS) {
+		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
+		glm::vec3 myRotationAxis( 0,1,0);
+		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f), -0.05f, myRotationAxis );
+		ModelMatrix = rotationMatrix * ModelMatrix;
+	}
+
+	if(glfwGetKey(window,GLFW_KEY_Z) == GLFW_PRESS) {
+		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
+		glm::vec3 myRotationAxis( 0,0,1);
+		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f),0.05f, myRotationAxis );
+		ModelMatrix = rotationMatrix * ModelMatrix;
+	}
+
+	if(glfwGetKey(window,GLFW_KEY_X) == GLFW_PRESS) {
+		// Use #include <glm/gtc/matrix_transform.hpp> and #include <glm/gtx/transform.hpp>
+		glm::vec3 myRotationAxis( 0,0,1);
+		glm::mat4 rotationMatrix = glm::rotate( glm::mat4(1.0f),-0.05f, myRotationAxis );
+		ModelMatrix = rotationMatrix * ModelMatrix;
 	}
 
 	float FoV = initialFoV;// - 5 * glfwGetMouseWheel(); // Now GLFW 3 requires setting up a callback for this. It's a bit too complicated for this beginner's tutorial, so it's disabled instead.
