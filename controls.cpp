@@ -43,6 +43,8 @@ float x = -5.0f;
 float y = 0.0f;
 // z init pos
 float z = 0.0f;
+// Angle for the head of projection plane
+float projPlaneAngle = 0.0f;
 
 // Initial position : on +Z
 glm::vec3 position = glm::vec3( x,y,z ); 
@@ -52,7 +54,11 @@ float speed = 3.0f; // 3 units / second
 glm::vec3 initPos(-rad,0,0);
 glm::vec3 initDir(0,0,0);
 glm::vec3 deltaPositionVector(0.01,0,0.01);
-
+// Direction for camera
+glm::vec3 direction(0,0,0);
+// Up vector
+glm::vec3 up(0,1,0);
+glm::vec3 initUp(0,1,0);
 
 
 void computeMatricesFromInputs(){
@@ -75,12 +81,7 @@ void computeMatricesFromInputs(){
 	glm::mat4 xRotate(
 		
 	);
-	// Direction : Spherical coordinates to Cartesian coordinates conversion
-	glm::vec3 direction(0,0,0);
 
-	// Up vector
-	// glm::vec3 up = glm::cross( right, direction );
-	glm::vec3 up(0,1,0);
 
 	// Move forward
 	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
@@ -109,6 +110,18 @@ void computeMatricesFromInputs(){
 		position = rotateVector;
 	}
 
+	// Projection Plane Rotation
+	if (glfwGetKey(window, GLFW_KEY_9) == GLFW_PRESS) {
+		projPlaneAngle+=0.01f;
+		glm::vec3 rotateVector(0,cos(projPlaneAngle),sin(projPlaneAngle));
+		up = rotateVector;
+	}
+	if (glfwGetKey(window, GLFW_KEY_0) == GLFW_PRESS) {
+		projPlaneAngle-=0.01f;
+		glm::vec3 rotateVector(0,cos(projPlaneAngle),sin(projPlaneAngle));
+		up = rotateVector;
+	}
+
 	// Model x rotation
 	if(glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS) {
 		// ViewMatrix = ViewMatrix*deltaTime*
@@ -135,6 +148,7 @@ void computeMatricesFromInputs(){
 		x = -5.0f;
 		y = 0.0f;
 		z = 0.0f;
+		up = initUp;
 	}
 
 	float FoV = initialFoV;// - 5 * glfwGetMouseWheel(); // Now GLFW 3 requires setting up a callback for this. It's a bit too complicated for this beginner's tutorial, so it's disabled instead.
