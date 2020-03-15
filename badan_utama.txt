@@ -1,0 +1,44 @@
+static const GLfloat badan_utama_vertex_buffer_data[] = {
+// depan
+0f, 0f, 0.5f,
+1.5f, 0f, 0.5f,
+0f, 0.5f, 0.5f,
+1.5f, 0f, 0.5f,
+0f, 0.5f, 0.5f,
+1.5f, 0.5f, 0.5f,
+// belakang--
+0f, 0f, 0f,
+1.5f, 0f, 0f,
+0f, 0.5f, 0f,
+1.5f, 0f, 0f,
+0f, 0.5f, 0f,
+1.5f, 0.5f, 0f,
+// kanan
+1.5f, 0f, 0.5f,
+1.5f, 0f, 0f,
+1.5f, 0.5f, 0.5f,
+1.5f, 0.5f, 0.5f,
+1.5f, 0f, 0f,
+1.5f, 0.5f, 0f,
+// kiri
+0f, 0f, 0.5f,
+0f, 0.5f, 0.5f,
+0f, 0f, 0f,
+0f, 0.5f, 0.5f,
+0f, 0f, 0f,
+0f, 0.5f, 0f,
+// atas
+0f, 0.5f, 0.5f,
+1.5f, 0.5f, 0.5f,
+0f, 0.5f, 0f,
+1.5f, 0.5f, 0.5f,
+0f, 0.5f, 0f,
+1.5f, 0.5f, 0f,
+// bawah
+0f, 0f, 0.5f,
+1.5f, 0f, 0.5f,
+0f, 0f, 0f,
+1.5f, 0f, 0.5f,
+0f, 0f, 0f,
+1.5f, 0f, 0f,
+};
