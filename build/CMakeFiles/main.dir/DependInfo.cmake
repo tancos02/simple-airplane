@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/paulus/Tugas/GrafKom/simple-airplane/common/controls.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/common/controls.cpp.o"
   "/home/paulus/Tugas/GrafKom/simple-airplane/common/shader.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/common/shader.cpp.o"
+  "/home/paulus/Tugas/GrafKom/simple-airplane/src/Model.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/src/Model.cpp.o"
   "/home/paulus/Tugas/GrafKom/simple-airplane/src/main.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

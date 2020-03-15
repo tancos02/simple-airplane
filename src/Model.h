@@ -1,6 +1,5 @@
-#ifndef POINTS_H
-#define POINTS_H
-
+#ifndef MODEL_H
+#define MODEL_H
 // Include standard headers
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +15,9 @@
 #include <glm/gtc/matrix_transform.hpp>
 using namespace glm;
 
+extern const GLfloat g_vertex_buffer_data[];
 
-extern GLfloat g_vertex_buffer_data[];
+extern const GLfloat g_color_buffer_data[];
+
 
 #endif

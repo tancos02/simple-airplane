@@ -665,6 +665,33 @@ common/shader.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/common/shader.cpp.s
 .PHONY : common/shader.cpp.s
 
+src/Model.o: src/Model.cpp.o
+
+.PHONY : src/Model.o
+
+# target to build an object file
+src/Model.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Model.cpp.o
+.PHONY : src/Model.cpp.o
+
+src/Model.i: src/Model.cpp.i
+
+.PHONY : src/Model.i
+
+# target to preprocess a source file
+src/Model.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Model.cpp.i
+.PHONY : src/Model.cpp.i
+
+src/Model.s: src/Model.cpp.s
+
+.PHONY : src/Model.s
+
+# target to generate assembly for a file
+src/Model.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Model.cpp.s
+.PHONY : src/Model.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -745,6 +772,9 @@ help:
 	@echo "... common/shader.o"
 	@echo "... common/shader.i"
 	@echo "... common/shader.s"
+	@echo "... src/Model.o"
+	@echo "... src/Model.i"
+	@echo "... src/Model.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

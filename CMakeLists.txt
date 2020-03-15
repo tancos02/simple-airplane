@@ -58,6 +58,7 @@ add_definitions(
 
 # Tutorial 2
 add_executable(main
+	src/Model.cpp
 	src/main.cpp
 	common/shader.cpp
 	common/shader.hpp
