@@ -86,12 +86,12 @@ CMakeFiles/main.dir/common/controls.cpp.o
  ../external/glm-0.9.7.1/glm/vec3.hpp
  ../external/glm-0.9.7.1/glm/vec4.hpp
  ../external/glm-0.9.7.1/glm/vector_relational.hpp
- /home/paulus/Tugas/GrafKom/simple-airplane/common/controls.cpp
- /home/paulus/Tugas/GrafKom/simple-airplane/common/controls.hpp
+ /home/hanif/ITB/Education/Semester6/simple-airplane/common/controls.cpp
+ /home/hanif/ITB/Education/Semester6/simple-airplane/common/controls.hpp
 CMakeFiles/main.dir/common/shader.cpp.o
  ../external/glew-1.13.0/include/GL/glew.h
- /home/paulus/Tugas/GrafKom/simple-airplane/common/shader.cpp
- /home/paulus/Tugas/GrafKom/simple-airplane/common/shader.hpp
+ /home/hanif/ITB/Education/Semester6/simple-airplane/common/shader.cpp
+ /home/hanif/ITB/Education/Semester6/simple-airplane/common/shader.hpp
 CMakeFiles/main.dir/src/Model.cpp.o
  ../external/glew-1.13.0/include/GL/glew.h
  ../external/glfw-3.1.2/include/GLFW/glfw3.h
@@ -178,8 +178,8 @@ CMakeFiles/main.dir/src/Model.cpp.o
  ../external/glm-0.9.7.1/glm/vec3.hpp
  ../external/glm-0.9.7.1/glm/vec4.hpp
  ../external/glm-0.9.7.1/glm/vector_relational.hpp
- /home/paulus/Tugas/GrafKom/simple-airplane/src/Model.cpp
- /home/paulus/Tugas/GrafKom/simple-airplane/src/Model.h
+ /home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.cpp
+ /home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.h
 CMakeFiles/main.dir/src/main.cpp.o
  .././common/controls.hpp
  .././common/shader.hpp
@@ -268,5 +268,5 @@ CMakeFiles/main.dir/src/main.cpp.o
  ../external/glm-0.9.7.1/glm/vec3.hpp
  ../external/glm-0.9.7.1/glm/vec4.hpp
  ../external/glm-0.9.7.1/glm/vector_relational.hpp
- /home/paulus/Tugas/GrafKom/simple-airplane/src/Model.h
- /home/paulus/Tugas/GrafKom/simple-airplane/src/main.cpp
+ /home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.h
+ /home/hanif/ITB/Education/Semester6/simple-airplane/src/main.cpp

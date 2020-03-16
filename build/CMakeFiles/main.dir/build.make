@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paulus/Tugas/GrafKom/simple-airplane
+CMAKE_SOURCE_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paulus/Tugas/GrafKom/simple-airplane/build
+CMAKE_BINARY_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/src/Model.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/Model.cpp.o: ../src/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/Model.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Model.cpp.o -c /home/paulus/Tugas/GrafKom/simple-airplane/src/Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/src/Model.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/Model.cpp.o -c /home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.cpp
 
 CMakeFiles/main.dir/src/Model.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/Model.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/src/Model.cpp > CMakeFiles/main.dir/src/Model.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.cpp > CMakeFiles/main.dir/src/Model.cpp.i
 
 CMakeFiles/main.dir/src/Model.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/Model.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/src/Model.cpp -o CMakeFiles/main.dir/src/Model.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.cpp -o CMakeFiles/main.dir/src/Model.cpp.s
 
 CMakeFiles/main.dir/src/Model.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/main.dir/src/Model.cpp.o.provides.build: CMakeFiles/main.dir/src/Mode
 
 CMakeFiles/main.dir/src/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/paulus/Tugas/GrafKom/simple-airplane/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/src/main.cpp.o -c /home/hanif/ITB/Education/Semester6/simple-airplane/src/main.cpp
 
 CMakeFiles/main.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/src/main.cpp > CMakeFiles/main.dir/src/main.cpp.i
 
 CMakeFiles/main.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/src/main.cpp -o CMakeFiles/main.dir/src/main.cpp.s
 
 CMakeFiles/main.dir/src/main.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/main.dir/src/main.cpp.o.provides.build: CMakeFiles/main.dir/src/main.
 
 CMakeFiles/main.dir/common/shader.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/common/shader.cpp.o: ../common/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/common/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/common/shader.cpp.o -c /home/paulus/Tugas/GrafKom/simple-airplane/common/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/common/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/common/shader.cpp.o -c /home/hanif/ITB/Education/Semester6/simple-airplane/common/shader.cpp
 
 CMakeFiles/main.dir/common/shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/common/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/common/shader.cpp > CMakeFiles/main.dir/common/shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/common/shader.cpp > CMakeFiles/main.dir/common/shader.cpp.i
 
 CMakeFiles/main.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/common/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/common/shader.cpp -o CMakeFiles/main.dir/common/shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/common/shader.cpp -o CMakeFiles/main.dir/common/shader.cpp.s
 
 CMakeFiles/main.dir/common/shader.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/main.dir/common/shader.cpp.o.provides.build: CMakeFiles/main.dir/comm
 
 CMakeFiles/main.dir/common/controls.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/common/controls.cpp.o: ../common/controls.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/common/controls.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/common/controls.cpp.o -c /home/paulus/Tugas/GrafKom/simple-airplane/common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/common/controls.cpp.o -c /home/hanif/ITB/Education/Semester6/simple-airplane/common/controls.cpp
 
 CMakeFiles/main.dir/common/controls.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/common/controls.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/common/controls.cpp > CMakeFiles/main.dir/common/controls.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/common/controls.cpp > CMakeFiles/main.dir/common/controls.cpp.i
 
 CMakeFiles/main.dir/common/controls.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/common/controls.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/common/controls.cpp -o CMakeFiles/main.dir/common/controls.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/common/controls.cpp -o CMakeFiles/main.dir/common/controls.cpp.s
 
 CMakeFiles/main.dir/common/controls.cpp.o.requires:
 
@@ -191,9 +191,9 @@ main: /usr/lib/x86_64-linux-gnu/libXcursor.so
 main: /usr/lib/x86_64-linux-gnu/libGL.so
 main: /usr/lib/x86_64-linux-gnu/libGLU.so
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
-	/usr/bin/cmake -E copy /home/paulus/Tugas/GrafKom/simple-airplane/build/./main /home/paulus/Tugas/GrafKom/simple-airplane/src/
+	/usr/bin/cmake -E copy /home/hanif/ITB/Education/Semester6/simple-airplane/build/./main /home/hanif/ITB/Education/Semester6/simple-airplane/src/
 
 # Rule to build all files generated by this target.
 CMakeFiles/main.dir/build: main
@@ -212,6 +212,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/paulus/Tugas/GrafKom/simple-airplane /home/paulus/Tugas/GrafKom/simple-airplane /home/paulus/Tugas/GrafKom/simple-airplane/build /home/paulus/Tugas/GrafKom/simple-airplane/build /home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hanif/ITB/Education/Semester6/simple-airplane /home/hanif/ITB/Education/Semester6/simple-airplane /home/hanif/ITB/Education/Semester6/simple-airplane/build /home/hanif/ITB/Education/Semester6/simple-airplane/build /home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

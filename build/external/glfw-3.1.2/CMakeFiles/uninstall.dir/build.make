@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paulus/Tugas/GrafKom/simple-airplane
+CMAKE_SOURCE_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paulus/Tugas/GrafKom/simple-airplane/build
+CMAKE_BINARY_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane/build
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/paulus/Tugas/GrafKom/simple-airplane/build
 include external/glfw-3.1.2/CMakeFiles/uninstall.dir/progress.make
 
 external/glfw-3.1.2/CMakeFiles/uninstall:
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2 && /usr/bin/cmake -P /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/cmake_uninstall.cmake
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2 && /usr/bin/cmake -P /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/cmake_uninstall.cmake
 
 uninstall: external/glfw-3.1.2/CMakeFiles/uninstall
 uninstall: external/glfw-3.1.2/CMakeFiles/uninstall.dir/build.make
@@ -67,10 +67,10 @@ external/glfw-3.1.2/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : external/glfw-3.1.2/CMakeFiles/uninstall.dir/build
 
 external/glfw-3.1.2/CMakeFiles/uninstall.dir/clean:
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : external/glfw-3.1.2/CMakeFiles/uninstall.dir/clean
 
 external/glfw-3.1.2/CMakeFiles/uninstall.dir/depend:
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/paulus/Tugas/GrafKom/simple-airplane /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2 /home/paulus/Tugas/GrafKom/simple-airplane/build /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2 /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hanif/ITB/Education/Semester6/simple-airplane /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2 /home/hanif/ITB/Education/Semester6/simple-airplane/build /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2 /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : external/glfw-3.1.2/CMakeFiles/uninstall.dir/depend
 

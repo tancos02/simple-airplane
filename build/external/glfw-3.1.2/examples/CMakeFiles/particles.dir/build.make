@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paulus/Tugas/GrafKom/simple-airplane
+CMAKE_SOURCE_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paulus/Tugas/GrafKom/simple-airplane/build
+CMAKE_BINARY_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane/build
 
 # Include any dependencies generated for this target.
 include external/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend.make
@@ -59,16 +59,16 @@ include external/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o: external/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o: ../external/glfw-3.1.2/examples/particles.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/particles.dir/particles.c.o   -c /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/examples/particles.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o"
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/particles.dir/particles.c.o   -c /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/examples/particles.c
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/particles.dir/particles.c.i"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/examples/particles.c > CMakeFiles/particles.dir/particles.c.i
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/examples/particles.c > CMakeFiles/particles.dir/particles.c.i
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/particles.dir/particles.c.s"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/examples/particles.c -o CMakeFiles/particles.dir/particles.c.s
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/examples/particles.c -o CMakeFiles/particles.dir/particles.c.s
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o.requires:
 
@@ -83,16 +83,16 @@ external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o.provides.bui
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o: external/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o: ../external/glfw-3.1.2/deps/tinycthread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/particles.dir/__/deps/tinycthread.c.o   -c /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/particles.dir/__/deps/tinycthread.c.o   -c /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/particles.dir/__/deps/tinycthread.c.i"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c > CMakeFiles/particles.dir/__/deps/tinycthread.c.i
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c > CMakeFiles/particles.dir/__/deps/tinycthread.c.i
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/particles.dir/__/deps/tinycthread.c.s"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c -o CMakeFiles/particles.dir/__/deps/tinycthread.c.s
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c -o CMakeFiles/particles.dir/__/deps/tinycthread.c.s
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o.requires:
 
@@ -107,16 +107,16 @@ external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o.pr
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o: external/glfw-3.1.2/examples/CMakeFiles/particles.dir/flags.make
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o: ../external/glfw-3.1.2/deps/getopt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/particles.dir/__/deps/getopt.c.o   -c /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/getopt.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/particles.dir/__/deps/getopt.c.o   -c /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/getopt.c
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/particles.dir/__/deps/getopt.c.i"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/getopt.c > CMakeFiles/particles.dir/__/deps/getopt.c.i
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/getopt.c > CMakeFiles/particles.dir/__/deps/getopt.c.i
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/particles.dir/__/deps/getopt.c.s"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/getopt.c -o CMakeFiles/particles.dir/__/deps/getopt.c.s
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/getopt.c -o CMakeFiles/particles.dir/__/deps/getopt.c.s
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o.requires:
 
@@ -162,8 +162,8 @@ external/glfw-3.1.2/examples/particles: /usr/lib/x86_64-linux-gnu/libXxf86vm.so
 external/glfw-3.1.2/examples/particles: /usr/lib/x86_64-linux-gnu/libXcursor.so
 external/glfw-3.1.2/examples/particles: /usr/lib/x86_64-linux-gnu/libGL.so
 external/glfw-3.1.2/examples/particles: external/glfw-3.1.2/examples/CMakeFiles/particles.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable particles"
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/particles.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable particles"
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/particles.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/build: external/glfw-3.1.2/examples/particles
@@ -177,10 +177,10 @@ external/glfw-3.1.2/examples/CMakeFiles/particles.dir/requires: external/glfw-3.
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/particles.dir/requires
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/clean:
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/particles.dir/cmake_clean.cmake
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples && $(CMAKE_COMMAND) -P CMakeFiles/particles.dir/cmake_clean.cmake
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/particles.dir/clean
 
 external/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend:
-	cd /home/paulus/Tugas/GrafKom/simple-airplane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/paulus/Tugas/GrafKom/simple-airplane /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/examples /home/paulus/Tugas/GrafKom/simple-airplane/build /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples /home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hanif/ITB/Education/Semester6/simple-airplane/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hanif/ITB/Education/Semester6/simple-airplane /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/examples /home/hanif/ITB/Education/Semester6/simple-airplane/build /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples /home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : external/glfw-3.1.2/examples/CMakeFiles/particles.dir/depend
 

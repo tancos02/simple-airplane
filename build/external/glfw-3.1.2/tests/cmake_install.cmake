@@ -1,4 +1,4 @@
-# Install script for directory: /home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/tests
+# Install script for directory: /home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

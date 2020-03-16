@@ -14,7 +14,7 @@ string
 string
 -
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/AntPerfTimer.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/AntPerfTimer.h
 windows.h
 -
 tchar.h
@@ -24,161 +24,161 @@ sys/time.h
 unistd.h
 -
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 LoadOGL.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.h
 dlfcn.h
 -
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 LoadOGLCore.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.h
 dlfcn.h
 -
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwBar.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwBar.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 AntTweakBar.h
 -
 TwMgr.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
 TwBar.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwBar.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwBar.h
 TwColors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwBar.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwBar.h
 AntTweakBar.h
 -
 TwColors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 TwColors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D10.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D10.h
 TwGraph.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D11.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D11.h
 TwGraph.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D9.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D9.h
 TwGraph.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 TwMgr.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
 TwFonts.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 TwColors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
 TwFonts.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 AntTweakBar.h
 -
 TwMgr.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
 TwBar.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwBar.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwBar.h
 TwFonts.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
 TwOpenGL.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.h
 TwOpenGLCore.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.h
 TwDirect3D9.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D9.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D9.h
 TwDirect3D10.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D10.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D10.h
 TwDirect3D11.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D11.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwDirect3D11.h
 resource.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/resource.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/resource.h
 crtdbg.h
 -
 res/TwXCursors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
 res/TwXCursors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
 res/TwXCursors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
 AntTweakBar.h
 -
 TwColors.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.h
 TwFonts.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.h
 TwGraph.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 AntPerfTimer.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/AntPerfTimer.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/AntPerfTimer.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 LoadOGL.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.h
 TwOpenGL.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.h
 TwMgr.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.h
 TwGraph.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.cpp
 GL3/gl3.h
 -
 OpenGL/gl3.h
 -
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 LoadOGLCore.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.h
 TwOpenGLCore.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.h
 TwMgr.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.h
 TwGraph.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwGraph.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.cpp
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.cpp
 TwPrecomp.h
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.h
 cstdio
 -
 cassert
@@ -232,7 +232,7 @@ OpenGL/gl.h
 GL/gl.h
 -
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/res/TwXCursors.h
 
-/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/resource.h
+/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/resource.h
 

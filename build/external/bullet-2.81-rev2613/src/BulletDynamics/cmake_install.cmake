@@ -1,4 +1,4 @@
-# Install script for directory: /home/paulus/Tugas/GrafKom/simple-airplane/external/bullet-2.81-rev2613/src/BulletDynamics
+# Install script for directory: /home/hanif/ITB/Education/Semester6/simple-airplane/external/bullet-2.81-rev2613/src/BulletDynamics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/install_manifest.txt\"")
+if (NOT EXISTS "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/install_manifest.txt\"")
 endif()
 
-file(READ "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/install_manifest.txt" files)
+file(READ "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

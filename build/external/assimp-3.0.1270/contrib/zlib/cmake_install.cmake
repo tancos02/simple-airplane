@@ -1,4 +1,4 @@
-# Install script for directory: /home/paulus/Tugas/GrafKom/simple-airplane/external/assimp-3.0.1270/contrib/zlib
+# Install script for directory: /home/hanif/ITB/Education/Semester6/simple-airplane/external/assimp-3.0.1270/contrib/zlib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/paulus/Tugas/GrafKom/simple-airplane/common/controls.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/common/controls.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/common/shader.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/common/shader.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/src/Model.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/src/Model.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/src/main.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/main.dir/src/main.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/common/controls.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles/main.dir/common/controls.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/common/shader.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles/main.dir/common/shader.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/src/Model.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles/main.dir/src/Model.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/src/main.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles/main.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -33,8 +33,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/GLEW_1130.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/getopt.c" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/examples/particles.c" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/getopt.c" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/getopt.c.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/deps/tinycthread.c" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/__/deps/tinycthread.c.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/examples/particles.c" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/examples/CMakeFiles/particles.dir/particles.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -27,7 +27,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/glfw-3.1.2/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/paulus/Tugas/GrafKom/simple-airplane
+CMAKE_SOURCE_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/paulus/Tugas/GrafKom/simple-airplane/build
+CMAKE_BINARY_DIR = /home/hanif/ITB/Education/Semester6/simple-airplane/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles /home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles /home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulus/Tugas/GrafKom/simple-airplane/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hanif/ITB/Education/Semester6/simple-airplane/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -521,19 +521,6 @@ windows/fast:
 .PHONY : windows/fast
 
 #=============================================================================
-# Target rules for targets named docs
-
-# Build rule for target.
-docs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 docs
-.PHONY : docs
-
-# fast build rule for target.
-docs/fast:
-	$(MAKE) -f external/glfw-3.1.2/docs/CMakeFiles/docs.dir/build.make external/glfw-3.1.2/docs/CMakeFiles/docs.dir/build
-.PHONY : docs/fast
-
-#=============================================================================
 # Target rules for targets named zlib
 
 # Build rule for target.
@@ -759,7 +746,6 @@ help:
 	@echo "... empty"
 	@echo "... tearing"
 	@echo "... windows"
-	@echo "... docs"
 	@echo "... zlib"
 	@echo "... assimp"
 	@echo "... BulletSoftBody"

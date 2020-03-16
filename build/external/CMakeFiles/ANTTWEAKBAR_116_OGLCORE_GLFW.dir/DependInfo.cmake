@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwEventGLFW.c" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwEventGLFW.c" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwEventGLFW.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -29,15 +29,15 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "../external/bullet-2.81-rev2613/src"
   )
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwBar.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwColors.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.o"
-  "/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.cpp" "/home/paulus/Tugas/GrafKom/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGL.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGL.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/LoadOGLCore.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/LoadOGLCore.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwBar.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwBar.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwColors.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwColors.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwFonts.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwFonts.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwMgr.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwMgr.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGL.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGL.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwOpenGLCore.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwOpenGLCore.cpp.o"
+  "/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/src/TwPrecomp.cpp" "/home/hanif/ITB/Education/Semester6/simple-airplane/build/external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/AntTweakBar-1.16/src/TwPrecomp.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

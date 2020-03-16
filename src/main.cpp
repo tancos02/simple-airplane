@@ -13,14 +13,17 @@ GLFWwindow* window;
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 using namespace glm;
-
+using namespace std;
+#include <iostream>
 #include <common/shader.hpp>
 #include <common/controls.hpp>
 
 #include "Model.h"
 
+void printHelp();
 int main( void )
 {	
+	printHelp();
 	// Initialise GLFW
 	if( !glfwInit() )
 	{
@@ -161,3 +164,21 @@ int main( void )
 	return 0;
 }
 
+void printHelp() {
+	cout << "Tombol Fungsionalitas" << endl;
+	cout << "Q      Merotasi objek terhadap sumbu X positif" << endl;
+	cout << "W      Merotasi objek terhadap sumbu X negatif" << endl;
+	cout << "A      Merotasi objek terhadap sumbu Y positif" << endl;
+	cout << "S      Merotasi objek terhadap sumbu Y negatif" << endl;
+	cout << "Z      Merotasi objek terhadap sumbu Z positif" << endl;
+	cout << "X      Merotasi objek terhadap sumbu Z negatif" << endl;
+	cout << "R      Menginisialisasi ulang" << endl;
+	cout << "0      Memutar vektor yang menunjuk arah atas kamera terhadap sumbu X negatif" << endl;
+	cout << "9      Memutar vektor yang menunjuk arah atas kamera terhadap sumbu X porsitif" << endl;
+	cout << "UP     Mendekatkan kamera ke titik (0,0,0)" << endl;
+	cout << "DOWN   Menjauhkan kamera dari titik (0,0,0)" << endl;
+	cout << "LEFT   Merotasi kamera terhadap vector up positif" << endl;
+	cout << "RIGHT  Merotasi kamera terhadap vector up negatif" << endl;
+	cout << "T      Mengaktifkan shader" << endl;
+	cout << "Y      Menonaktifkan shader" << endl;
+}

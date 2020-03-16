@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = -DGLEW_STATIC -DTW_NO_DIRECT3D -DTW_NO_LIB_PRAGMA -DTW_STATIC -D_CRT_SECURE_NO_WARNINGS -D_LARGEFILE64_SOURCE=1 -D_UNIX
 
-C_INCLUDES = -I/home/paulus/Tugas/GrafKom/simple-airplane/external/glfw-3.1.2/include/GLFW -I/home/paulus/Tugas/GrafKom/simple-airplane/external/glew-1.13.0/include -I/home/paulus/Tugas/GrafKom/simple-airplane/external/AntTweakBar-1.16/include -I/home/paulus/Tugas/GrafKom/simple-airplane/external/assimp-3.0.1270/contrib/zlib 
+C_INCLUDES = -I/home/hanif/ITB/Education/Semester6/simple-airplane/external/glfw-3.1.2/include/GLFW -I/home/hanif/ITB/Education/Semester6/simple-airplane/external/glew-1.13.0/include -I/home/hanif/ITB/Education/Semester6/simple-airplane/external/AntTweakBar-1.16/include -I/home/hanif/ITB/Education/Semester6/simple-airplane/external/assimp-3.0.1270/contrib/zlib 
 
