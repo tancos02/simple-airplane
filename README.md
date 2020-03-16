@@ -2,6 +2,8 @@
 Simple 3D Airplane using OpenGL in C++
 
 ## How to use
+- Delete folder build : rm -rf build
+- mkdir build
 - cd build
 - in terminal, give command "make all"
 - cd ..
